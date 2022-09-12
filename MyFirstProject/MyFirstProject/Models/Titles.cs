@@ -7,6 +7,7 @@ namespace MyFirstProject.Models
     public static class Titles
     {
         public static string MainPageTitle { get; } = "Main Page";
+        public static string MainPageSubtitle { get; } = "My Epic Mobile App";
 
     }
 }

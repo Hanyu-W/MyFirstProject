@@ -15,6 +15,7 @@ namespace MyFirstProject
         {
             InitializeComponent();
             this.BindingContext = new MainPageViewModel();
+            this.BindingContext = new MainPageViewModel();
         }
     }
 }
