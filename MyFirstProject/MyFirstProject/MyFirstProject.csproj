@@ -14,4 +14,12 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewViewModel\Layout\" />
+    <Folder Include="ViewViewModel\Image\" />
+    <Folder Include="ViewViewModel\List View\" />
+    <Folder Include="ViewViewModel\Controls\" />
+    <Folder Include="ViewViewModel\SQLite\" />
+  </ItemGroup>
 </Project>
