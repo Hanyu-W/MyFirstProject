@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,19 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ViewViewModel\Layout\LayoutMenuView.xaml.cs">
-      <DependentUpon>LayoutMenuView.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="ViewViewModel\Controls\ControlsMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Image\ImageMenuView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ViewViewModel\Layout\LayoutMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\List View\ListViewMenuView.xaml">
@@ -37,5 +28,9 @@
     <EmbeddedResource Update="ViewViewModel\SQLite\SQLiteMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewViewModel\Layout\" />
   </ItemGroup>
 </Project>

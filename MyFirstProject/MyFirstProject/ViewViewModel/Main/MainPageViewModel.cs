@@ -2,7 +2,6 @@
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.Controls;
 using MyFirstProject.ViewViewModel.Image;
-using MyFirstProject.ViewViewModel.Layout;
 using MyFirstProject.ViewViewModel.List_View;
 using MyFirstProject.ViewViewModel.SQLite;
 using System;
@@ -57,15 +56,17 @@ namespace MyFirstProject.ViewViewModel.Main
             await Application.Current.MainPage.Navigation.PushAsync(new ImageMenuView());
         }
 
+        private async void OnLayoutClickedAsync(object obj)
+        {
+            //await Application.Current.MainPage.Navigation.PushAsync(new LayoutMenuView());
+        }
+
         public string Subtitle
         {
             get { return subtitle; }
             set { SetProperty(ref subtitle, value); }
         }
 
-        private async void OnLayoutClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new LayoutMenuView());
-        }
+
     }
 }
