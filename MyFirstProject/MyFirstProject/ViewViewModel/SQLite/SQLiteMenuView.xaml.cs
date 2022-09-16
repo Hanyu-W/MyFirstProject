@@ -15,6 +15,7 @@ namespace MyFirstProject.ViewViewModel.SQLite
         public SQLiteMenuView()
         {
             InitializeComponent();
+            this.BindingContext = new SQLiteViewModel();
         }
     }
 }
