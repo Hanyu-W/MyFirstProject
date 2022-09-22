@@ -4,10 +4,8 @@
              x:Class="MyFirstProject.ViewViewModel.Layout.AbsoluteLayout.AbsoluteLayoutMenuView"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <AbsoluteLayout>
+            <Label Text="Sample Text"/>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
