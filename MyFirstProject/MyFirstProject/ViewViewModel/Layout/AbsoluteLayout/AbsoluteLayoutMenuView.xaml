@@ -5,7 +5,26 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <AbsoluteLayout>
-            <Label Text="Sample Text"/>
+            <BoxView Color="Blue"
+                     AbsoluteLayout.LayoutBounds="0.5,0,100,25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView Color="Green"
+                     AbsoluteLayout.LayoutBounds="0,0.5,25,100"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView Color="Red"
+                     AbsoluteLayout.LayoutBounds="1,0.5,25,100"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <BoxView Color="Black"
+                     AbsoluteLayout.LayoutBounds="0.5,1,100,25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--<Label Text="Centered Text"-->
+                   <!--HorizontalTextAlignment="Center"-->
+                   <!--AbsoluteLayout.LayoutBounds="0.5,0.5,100,25"-->
+                   <!--AbsoluteLayout.LayoutFlags="PositionProportional"/>-->
+            <Button Text="Absolute Page" 
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,100,25"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Command="{Binding OnAbsoluteLayoutPageClicked}"/>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

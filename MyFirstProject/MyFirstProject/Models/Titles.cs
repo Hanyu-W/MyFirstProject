@@ -14,6 +14,7 @@ namespace MyFirstProject.Models
         public static string ControlMenuTitle { get; } = "Control Menu";
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
         public static string AbsoluteLayoutMenuTitle { get; } = "Absolute Layout Menu";
+        public static string AbsoluteLayoutPageTitle { get; } = "Absolute Page";
 
 
 

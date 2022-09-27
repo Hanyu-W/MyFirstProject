@@ -25,6 +25,9 @@
     <EmbeddedResource Update="ViewViewModel\Layout\AbsoluteLayout\AbsoluteLayoutMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Layout\AbsoluteLayout\AbsoluteLayoutPage\AbsoluteLayoutPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Layout\LayoutMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

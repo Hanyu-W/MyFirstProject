@@ -14,9 +14,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row ="0" Grid.Column="0" Text="Absolute View" Command="{Binding OnAbsoluteLayoutClicked}"/>
+                <Button Grid.Row ="0" Grid.Column="0" Text="Absolute" Command="{Binding OnAbsoluteLayoutClicked}"/>
             </Grid>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
