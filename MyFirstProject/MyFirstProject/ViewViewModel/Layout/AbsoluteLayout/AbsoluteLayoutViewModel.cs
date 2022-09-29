@@ -1,6 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
-using MyFirstProject.ViewViewModel.Layout.AbsoluteLayout.AbsoluteLayoutPage;
+using MyFirstProject.ViewViewModel.Layout.AbsoluteLayout;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +12,12 @@ namespace MyFirstProject.ViewViewModel.Layout.AbsoluteLayout
 {
     public class AbsoluteLayoutViewModel : BaseViewModel
     {
-        public ICommand OnAbsoluteLayoutPageClicked { get; set; }
+
         public AbsoluteLayoutViewModel()
         {
             Title = Titles.AbsoluteLayoutMenuTitle;
-            OnAbsoluteLayoutPageClicked = new Command(OnAbsoluteLayoutPageClickedAsync);
+
         }
-        private async void OnAbsoluteLayoutPageClickedAsync(object obj)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new AbsoluteLayoutPageView());
-        }
+        
     }
 }

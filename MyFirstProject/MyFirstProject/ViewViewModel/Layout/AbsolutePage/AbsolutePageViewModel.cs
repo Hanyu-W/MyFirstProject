@@ -6,11 +6,11 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace MyFirstProject.ViewViewModel.Layout.AbsoluteLayout.AbsoluteLayoutPage
+namespace MyFirstProject.ViewViewModel.Layout.AbsolutePage
 {
-    public class AbsoluteLayoutPageViewModel : ContentPage
+    public class AbsolutePageViewModel : ContentPage
     {
-        public AbsoluteLayoutPageViewModel()
+        public AbsolutePageViewModel()
         {
             Title = Titles.AbsoluteLayoutPageTitle;
         }
