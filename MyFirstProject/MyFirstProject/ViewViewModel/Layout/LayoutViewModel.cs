@@ -7,6 +7,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using MyFirstProject.ViewViewModel.Layout.AbsoluteLayout;
 using MyFirstProject.ViewViewModel.Layout.AbsolutePage;
+using MyFirstProject.ViewViewModel.Layout.RelativeLayout;
 
 namespace MyFirstProject.ViewViewModel.Layout
 {
@@ -14,11 +15,18 @@ namespace MyFirstProject.ViewViewModel.Layout
     {
         public ICommand OnAbsoluteLayoutClicked { get; set; }
         public ICommand OnAbsolutePageClicked { get; set; }
+        public ICommand OnRelativeLayoutClicked { get; set; }
         public LayoutViewModel()
         {
             Title = Titles.LayoutMenuTitle;
             OnAbsoluteLayoutClicked = new Command(OnAbsoluteLayoutClickedAsync);
             OnAbsolutePageClicked = new Command(OnAbsolutePageClickedAsync);
+            OnRelativeLayoutClicked = new Command(OnRelativeLayoutClickedAsync);
+        }
+
+        private async void OnRelativeLayoutClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new RelativeLayoutView());
         }
 
         private async void OnAbsoluteLayoutClickedAsync(object obj)

@@ -16,6 +16,7 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row ="0" Grid.Column="0" Text="Absolute" Command="{Binding OnAbsoluteLayoutClicked}"/>
                 <Button Grid.Row ="0" Grid.Column="1" Text="Absolute Page" Command="{Binding OnAbsolutePageClicked}"/>
+                <Button Grid.Row ="1" Grid.Column="0" Text="Relative Layout" Command="{Binding OnRelativeLayoutClicked}"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

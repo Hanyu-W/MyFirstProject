@@ -28,7 +28,7 @@
                    BackgroundColor="Red"
                    AbsoluteLayout.LayoutBounds="0.35,0.15,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="03"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -36,7 +36,7 @@
                    BackgroundColor="Maroon"
                    AbsoluteLayout.LayoutBounds="0.625,0.15,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="04"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -44,7 +44,8 @@
                    BackgroundColor="SkyBlue"
                    AbsoluteLayout.LayoutBounds="0.9,0.15,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            
+            <Label Text="05"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -52,7 +53,7 @@
                    BackgroundColor="Turquoise"
                    AbsoluteLayout.LayoutBounds="0.075,0.275,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="06"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -60,7 +61,7 @@
                    BackgroundColor="PaleVioletRed"
                    AbsoluteLayout.LayoutBounds="0.35,0.275,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="07"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -68,7 +69,7 @@
                    BackgroundColor="LightCoral"
                    AbsoluteLayout.LayoutBounds="0.625,0.275,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="08"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -76,7 +77,8 @@
                    BackgroundColor="Orange"
                    AbsoluteLayout.LayoutBounds="0.9,0.275,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            
+            <Label Text="09"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -84,7 +86,7 @@
                    BackgroundColor="Olive"
                    AbsoluteLayout.LayoutBounds="0.075,0.4,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="10"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -92,7 +94,7 @@
                    BackgroundColor="Purple"
                    AbsoluteLayout.LayoutBounds="0.35,0.4,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="11"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -100,7 +102,7 @@
                    BackgroundColor="YellowGreen"
                    AbsoluteLayout.LayoutBounds="0.625,0.4,75,45"
                    AbsoluteLayout.LayoutFlags="PositionProportional"/>
-            <Label Text="01"
+            <Label Text="12"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
