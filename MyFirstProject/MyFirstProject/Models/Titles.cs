@@ -16,7 +16,7 @@ namespace MyFirstProject.Models
         public static string AbsoluteLayoutMenuTitle { get; } = "Absolute Layout Menu";
         public static string AbsoluteLayoutPageTitle { get; } = "Absolute Page";
 
-
+        public static string RelativeLayoutTitle { get; } = "Relative Page";
 
     }
 }
