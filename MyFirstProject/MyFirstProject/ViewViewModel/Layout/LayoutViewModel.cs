@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using MyFirstProject.ViewViewModel.Layout.AbsoluteLayout;
 using MyFirstProject.ViewViewModel.Layout.AbsolutePage;
 using MyFirstProject.ViewViewModel.Layout.RelativeLayout;
+using MyFirstProject.ViewViewModel.Layout.Relative;
 
 namespace MyFirstProject.ViewViewModel.Layout
 {
@@ -16,12 +17,19 @@ namespace MyFirstProject.ViewViewModel.Layout
         public ICommand OnAbsoluteLayoutClicked { get; set; }
         public ICommand OnAbsolutePageClicked { get; set; }
         public ICommand OnRelativeLayoutClicked { get; set; }
+        public ICommand OnRelativeClicked { get; set; }
         public LayoutViewModel()
         {
             Title = Titles.LayoutMenuTitle;
             OnAbsoluteLayoutClicked = new Command(OnAbsoluteLayoutClickedAsync);
             OnAbsolutePageClicked = new Command(OnAbsolutePageClickedAsync);
             OnRelativeLayoutClicked = new Command(OnRelativeLayoutClickedAsync);
+            OnRelativeClicked = new Command(OnRelativeClickedAsync);
+        }
+
+        private async void OnRelativeClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new RelativeView());
         }
 
         private async void OnRelativeLayoutClickedAsync(object obj)
