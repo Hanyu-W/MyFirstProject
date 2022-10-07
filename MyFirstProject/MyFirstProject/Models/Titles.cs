@@ -17,6 +17,8 @@ namespace MyFirstProject.Models
         public static string AbsoluteLayoutPageTitle { get; } = "Absolute Page";
         public static string RelativeLayoutTitle { get; } = "Relative Page";
         public static string RelativeTitle { get; } = "Relative";
+        public static string URIimageTitle { get; } = "URI Image";
+        public static string VMIimageTitle { get; } = "VMI Image";
 
     }
 }

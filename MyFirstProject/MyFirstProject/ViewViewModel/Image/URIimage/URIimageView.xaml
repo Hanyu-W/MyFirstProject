@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModel.Image.URIimage.URIimageView"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"/>
+            <Image Source="{Binding ImgSrc}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
