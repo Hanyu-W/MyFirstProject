@@ -6,6 +6,8 @@
              BackgroundColor="Azure">
     <ContentPage.Content>
         <RelativeLayout>
+            
+            <!--Header-->
             <Label Text="Relative!"
                    FontSize="24"
                    RelativeLayout.XConstraint="{ConstraintExpression 
@@ -14,7 +16,8 @@
                    RelativeLayout.YConstraint="{ConstraintExpression 
 												Type=Constant,
 												Constant=25}" />
-            
+
+            <!--Row 1-->
             <BoxView Color="RoyalBlue"
 				   RelativeLayout.XConstraint="{ConstraintExpression 
 												Type=Constant, 
@@ -42,6 +45,8 @@
 				   RelativeLayout.HeightConstraint="{ConstraintExpression 
 												   Type=Constant, 
 												   Constant=50}"/>
+            
+            <!--Row 2-->
             <BoxView Color="Brown"
 				   RelativeLayout.XConstraint="{ConstraintExpression 
 												Type=Constant,
@@ -73,7 +78,7 @@
 												   Type=Constant, 
 												   Constant=50}" />
 
-            
+            <!--Inside Outside Box-->
             <BoxView Color="White"
 				 RelativeLayout.XConstraint="{ConstraintExpression 
 											  Type=RelativeToView,
@@ -95,8 +100,6 @@
 												   ElementName=Outside, 
 												   Property=Height,
 												   Factor=0.5}"/>
-            
-
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
