@@ -3,21 +3,26 @@ using MyFirstProject.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModel.Image.VMIimage
 {
     class VMIimageViewModel : BaseViewModel
     {
-        string srcImg = string.Empty;
+        public ImageSource ImageSrc { get; set; }
         public VMIimageViewModel()
         {
             Title = Titles.VMIimageTitle;
-            SrcImg = Images.Image1;
+            ImageSrc = this.SetImageSrc();
         }
-        public string SrcImg
+        
+        private ImageSource SetImageSrc()
         {
-            get { return srcImg; }
-            set { SetProperty(ref srcImg, value); }
+            var imgsrc = new UriImageSource { Uri = new Uri(Images.Image1) };
+            imgsrc.CachingEnabled = false;
+            imgsrc.CacheValidity = TimeSpan.FromHours(1);
+
+            return imgsrc;
         }
     }
 }
