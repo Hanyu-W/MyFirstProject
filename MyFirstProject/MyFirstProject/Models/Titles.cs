@@ -30,6 +30,7 @@ namespace MyFirstProject.Models
         public static string ImageMenuTitle { get; } = "Image Menu";
         public static string URIimageTitle { get; } = "URI Image";
         public static string VMIimageTitle { get; } = "VMI Image";
+        public static string EmbeddedImageTitle { get; } = "Embedded Image";
 
     }
 }

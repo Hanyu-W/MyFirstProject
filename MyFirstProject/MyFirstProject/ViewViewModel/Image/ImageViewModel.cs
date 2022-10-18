@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModel.Image.EmbeddedImage;
 using MyFirstProject.ViewViewModel.Image.URIimage;
 using MyFirstProject.ViewViewModel.Image.VMIimage;
 using System;
@@ -14,11 +15,13 @@ namespace MyFirstProject.ViewViewModel.Image
     {
         public ICommand OnURIimageClicked { get; set; }
         public ICommand OnVMIimageClicked { get; set; }
+        public ICommand OnEmbeddedimageClicked { get; set; }
         public ImageViewModel()
         {
             Title = Titles.ImageMenuTitle;
             OnURIimageClicked = new Command(OnURIimageClickedAsync);
             OnVMIimageClicked = new Command(OnVMIimageClickedAsync);
+            OnEmbeddedimageClicked = new Command(OnEmbeddedimageClickedAsync);
         }
 
         private async void OnURIimageClickedAsync(object obj)
@@ -29,6 +32,10 @@ namespace MyFirstProject.ViewViewModel.Image
         private async void OnVMIimageClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new VMIimageView());
+        }
+        private async void OnEmbeddedimageClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new EmbeddedImageView());
         }
     }
 }
