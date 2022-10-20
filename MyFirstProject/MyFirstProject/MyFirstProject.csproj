@@ -11,12 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\azusa-nakano.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Image\azusa-nakano.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="ViewViewModel\Controls\ControlsMenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Image\ActivityImage\ActivityImageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Image\EmbeddedImage\EmbeddedImageView.xaml">
@@ -52,9 +63,5 @@
     <EmbeddedResource Update="ViewViewModel\SQLite\SQLiteMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Image\" />
   </ItemGroup>
 </Project>

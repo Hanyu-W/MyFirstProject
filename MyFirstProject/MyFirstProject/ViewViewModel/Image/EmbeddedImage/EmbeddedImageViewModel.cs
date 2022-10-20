@@ -14,16 +14,13 @@ namespace MyFirstProject.ViewViewModel.Image.EmbeddedImage
         public EmbeddedImageViewModel()
         {
             Title = Titles.EmbeddedImageTitle;
-            //this.GetEmbeddedImageSrc();
+            this.GetEmbeddedImageSrc();
         }
 
-        //private GetEmbeddedImageSrc()
-        //{
-
-            //Image embeddedimagesrc = new Image { Source = ImageSource.FromResource("MyFirstProject.Image.azusa-nakano.jpg") };
-
-
-            //return embeddedimagesrc;
-        //}
+        private void GetEmbeddedImageSrc()
+        {
+            EmbeddedImageSrc = ImageSource.FromResource("MyFirstProject.Image.azusa-nakano.jpg");
+            
+        }
     }
 }
