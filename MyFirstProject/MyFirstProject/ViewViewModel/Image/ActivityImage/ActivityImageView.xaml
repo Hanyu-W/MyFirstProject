@@ -24,7 +24,7 @@
 
                 <Image x:Name="azunyan"
                        Source="{Binding ActivityImageSrc}"
-                       AbsoluteLayout.LayoutBounds="0, 0, 250, 250" />
+                       AbsoluteLayout.LayoutBounds="0, 0, 250, 250"/>
                 
             </AbsoluteLayout>
         </StackLayout>
