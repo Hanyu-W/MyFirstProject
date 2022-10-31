@@ -10,6 +10,7 @@ namespace MyFirstProject.ViewViewModel.Image.ActivityImage
     class ActivityImageViewModel : BaseViewModel
     {
         public ImageSource ActivityImageSrc { get; set; }
+
         public ActivityImageViewModel()
         {
             Title = Titles.ActivityImageTitle;

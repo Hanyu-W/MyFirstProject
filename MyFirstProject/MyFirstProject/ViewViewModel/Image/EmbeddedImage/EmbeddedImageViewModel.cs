@@ -11,6 +11,7 @@ namespace MyFirstProject.ViewViewModel.Image.EmbeddedImage
     class EmbeddedImageViewModel : BaseViewModel
     {
         public ImageSource EmbeddedImageSrc { get; set; }
+
         public EmbeddedImageViewModel()
         {
             Title = Titles.EmbeddedImageTitle;
