@@ -10,6 +10,7 @@ namespace MyFirstProject.ViewViewModel.Image.VMIimage
     class VMIimageViewModel : BaseViewModel
     {
         public ImageSource ImageSrc { get; set; }
+
         public VMIimageViewModel()
         {
             Title = Titles.VMIimageTitle;
