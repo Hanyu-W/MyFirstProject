@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstProject.ViewViewModel.Image.ImageMenuView"
              Title="{Binding Title}">
+    
     <ContentPage.Content>
         <StackLayout>
             <Grid Margin="20, 35, 20, 20">
