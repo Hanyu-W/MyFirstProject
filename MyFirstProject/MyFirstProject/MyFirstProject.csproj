@@ -12,10 +12,22 @@
 
   <ItemGroup>
     <None Remove="Image\azusa-nakano.jpg" />
+    <None Remove="Image\Divyesh.JPG" />
+    <None Remove="Image\Hanyu.HEIC" />
+    <None Remove="Image\Hanyu.jpg" />
+    <None Remove="Image\Ilya.JPG" />
+    <None Remove="Image\Justin.HEIC" />
+    <None Remove="Image\Justin.JPG" />
+    <None Remove="Image\Kevin.JPG" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Image\azusa-nakano.jpg" />
+    <EmbeddedResource Include="Image\Divyesh.jpg" />
+    <EmbeddedResource Include="Image\Hanyu.jpg" />
+    <EmbeddedResource Include="Image\Ilya.jpg" />
+    <EmbeddedResource Include="Image\Justin.JPG" />
+    <EmbeddedResource Include="Image\Kevin.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,6 +67,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Layout\Relative\RelativeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\List View\DisplayPersonsImage\DisplayPersonsImageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\List View\DisplayPersons\DisplayPersonsView.xaml">

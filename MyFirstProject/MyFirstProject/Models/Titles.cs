@@ -20,6 +20,7 @@ namespace MyFirstProject.Models
         //List View
         public static string ListViewMenuTitle { get; } = "List View Menu";
         public static string DisplayPersonsTitle { get; } = "Display Persons";
+        public static string DisplayImageTitle { get; } = "Display Persons With Images";
 
         //Controls
         public static string ControlMenuTitle { get; } = "Control Menu";

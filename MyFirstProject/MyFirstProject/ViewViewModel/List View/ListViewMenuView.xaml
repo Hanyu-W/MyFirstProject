@@ -15,6 +15,7 @@
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row ="0" Grid.Column="0" Text="Display Persons" Command="{Binding OnDisplayPersonsClicked}"/>
+                <Button Grid.Row ="0" Grid.Column="1" Text="Display Persons Image" Command="{Binding OnDisplayPersonsImageClicked}"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -6,20 +6,25 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
 
-namespace MyFirstProject.ViewViewModel.List_View.DisplayPersons
+namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage
 {
-    class DisplayPersonsViewModel : BaseViewModel
+    class DisplayPersonsImageViewModel : BaseViewModel
     {
         public ObservableCollection<Person> PersonsCollection { get; }
 
         public List<Person> _personList;
 
-        public DisplayPersonsViewModel()
+        public DisplayPersonsImageViewModel()
         {
-            Title = Titles.DisplayPersonsTitle;
+            Title = Titles.DisplayImageTitle;
             PersonsCollection = new ObservableCollection<Person>();
-            _personList = Person.getNames();
+            _personList = Person.getNamesWithPicture();
             this.loadPersons();
+            foreach(var p in PersonsCollection)
+            {
+                Debug.WriteLine(p);
+            }
+           
         }
 
         private void loadPersons()
@@ -32,7 +37,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersons
                     PersonsCollection.Add(p);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
             }

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModel.List_View.DisplayPersons
+namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DisplayPersonsView : ContentPage
+    public partial class DisplayPersonsImageView : ContentPage
     {
-        public DisplayPersonsView()
+        public DisplayPersonsImageView()
         {
             InitializeComponent();
-            this.BindingContext = new DisplayPersonsViewModel();
+            this.BindingContext = new DisplayPersonsImageViewModel();
         }
     }
 }

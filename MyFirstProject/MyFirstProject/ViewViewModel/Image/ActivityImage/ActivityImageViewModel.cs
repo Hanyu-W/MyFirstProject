@@ -20,7 +20,6 @@ namespace MyFirstProject.ViewViewModel.Image.ActivityImage
         private void GetActitivtyImageSrc()
         {
             ActivityImageSrc = ImageSource.FromResource("MyFirstProject.Image.azusa-nakano.jpg");
-
         }
     }
 }
