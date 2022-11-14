@@ -5,37 +5,48 @@
              xmlns:model="clr-namespace:MyFirstProject.Models"
              x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersons.DisplayPersonsView"
              Title="{Binding Title}">
+    <StackLayout>
 
-    <CollectionView x:Name="ItemsListView"
+        <Label Text="{Binding Subtitle}"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   AbsoluteLayout.LayoutBounds="0.5,0.05,100,25"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <CollectionView x:Name="ItemsListView"
                     ItemsSource="{Binding PersonsCollection}"
                     SelectionMode="None"
                     ItemsLayout="VerticalList">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
 
-                <Grid Padding="10" Margin="12">
+                    <Grid Padding="10" Margin="12">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.5"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5"/>
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackLayout Padding="10" x:DataType="model:Person">
-                        <Label Text="{Binding Name}"
-                               Grid.Column="0"
-                               Grid.Row="0"
-                               LineBreakMode="NoWrap"
-                               FontSize="16"
-                               FontAttributes="Bold"/>
-                    </StackLayout>
-                        
-                </Grid>
-                    
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                        <StackLayout Padding="10" x:DataType="model:Person">
+                            
+                            <Label Text="{Binding Name}"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                   LineBreakMode="NoWrap"
+                                   FontSize="16"
+                                   FontAttributes="Bold"/>
+                            
+                        </StackLayout>
 
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

@@ -1,8 +1,5 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModel.Image.ActivityImage

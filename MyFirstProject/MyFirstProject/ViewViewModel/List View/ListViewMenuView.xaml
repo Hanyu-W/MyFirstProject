@@ -6,16 +6,20 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid Margin="20, 35, 20, 20">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
+                
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
+                
                 <Button Grid.Row ="0" Grid.Column="0" Text="Display Persons" Command="{Binding OnDisplayPersonsClicked}"/>
                 <Button Grid.Row ="0" Grid.Column="1" Text="Display Persons Image" Command="{Binding OnDisplayPersonsImageClicked}"/>
+                
             </Grid>
         </StackLayout>
     </ContentPage.Content>

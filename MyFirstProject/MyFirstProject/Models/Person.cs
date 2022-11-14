@@ -1,7 +1,4 @@
-﻿using MyFirstProject.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace MyFirstProject.Models
@@ -9,6 +6,8 @@ namespace MyFirstProject.Models
     public class Person
     {
         public string Name { get; set; }
+
+        public string Description { get; set; }
 
         public ImageSource Image { get; set; }
 
@@ -25,9 +24,10 @@ namespace MyFirstProject.Models
         }
 
         //person contructor with name and image
-        public Person(string name, string image)
+        public Person(string name, string description, string image)
         {
             Name = name;
+            Description = description;
             Image = ImageSource.FromResource(image);
         }
 
@@ -49,11 +49,11 @@ namespace MyFirstProject.Models
         {
             return new List<Person>
             {
-                new Person("Divyesh Kotthakota", "MyFirstProject.Image.Divyesh.jpg"),
-                new Person("Kevin Yu", "MyFirstProject.Image.Kevin.jpg"),
-                new Person("Justin Lopato", "MyFirstProject.Image.Justin.JPG"),
-                new Person("Illia Myronov", "MyFirstProject.Image.Ilya.jpg"),
-                new Person("Hanyu Wei", "MyFirstProject.Image.Hanyu.jpg")
+                new Person("Divyesh Kotthakota", "Owns 26 Canadian Geese", "MyFirstProject.Image.Divyesh.jpg"),
+                new Person("Kevin Yu", "Gigachad", "MyFirstProject.Image.Kevin.jpg"),
+                new Person("Justin Lopato", "Skill Issue", "MyFirstProject.Image.Justin.JPG"),
+                new Person("Ilya Myronov", "We use math to make games", "MyFirstProject.Image.Ilya.jpg"),
+                new Person("Hanyu Wei", "The creator of this project", "MyFirstProject.Image.Hanyu.jpg")
             };
         }
 

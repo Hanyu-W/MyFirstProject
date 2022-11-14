@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyFirstProject.Models
+﻿namespace MyFirstProject.Models
 {
     public static class Titles
     {
@@ -16,11 +12,14 @@ namespace MyFirstProject.Models
         public static string AbsoluteLayoutPageTitle { get; } = "Absolute Page";
         public static string RelativeLayoutTitle { get; } = "Relative Page";
         public static string RelativeTitle { get; } = "Relative";
-        
+
         //List View
         public static string ListViewMenuTitle { get; } = "List View Menu";
         public static string DisplayPersonsTitle { get; } = "Display Persons";
+        public static string DisplayPersonsSubtitle { get; } = "The Boys";
         public static string DisplayImageTitle { get; } = "Display Persons With Images";
+        public static string DisplayImageSubtitle { get; } = "The Boys";
+
 
         //Controls
         public static string ControlMenuTitle { get; } = "Control Menu";

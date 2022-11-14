@@ -4,27 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Text;
 
 namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage
 {
     class DisplayPersonsImageViewModel : BaseViewModel
     {
+        string subtitle = string.Empty;
+
         public ObservableCollection<Person> PersonsCollection { get; }
 
-        public List<Person> _personList;
+        private List<Person> _personList;
 
         public DisplayPersonsImageViewModel()
         {
             Title = Titles.DisplayImageTitle;
+            Subtitle = Titles.DisplayImageSubtitle;
             PersonsCollection = new ObservableCollection<Person>();
             _personList = Person.getNamesWithPicture();
             this.loadPersons();
-            foreach(var p in PersonsCollection)
+            foreach (var p in PersonsCollection)
             {
                 Debug.WriteLine(p);
             }
-           
+
         }
 
         private void loadPersons()
@@ -41,6 +43,12 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage
             {
                 Debug.WriteLine(ex);
             }
+        }
+
+        public string Subtitle
+        {
+            get { return subtitle; }
+            set { SetProperty(ref subtitle, value); }
         }
     }
 }

@@ -1,12 +1,9 @@
-﻿using MyFirstProject.ViewModels;
-using MyFirstProject.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
+﻿using MyFirstProject.Models;
+using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.List_View.DisplayPersons;
 using MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModel.List_View
 {

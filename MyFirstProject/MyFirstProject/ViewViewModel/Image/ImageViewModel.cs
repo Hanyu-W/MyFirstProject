@@ -4,9 +4,6 @@ using MyFirstProject.ViewViewModel.Image.ActivityImage;
 using MyFirstProject.ViewViewModel.Image.EmbeddedImage;
 using MyFirstProject.ViewViewModel.Image.URIimage;
 using MyFirstProject.ViewViewModel.Image.VMIimage;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 

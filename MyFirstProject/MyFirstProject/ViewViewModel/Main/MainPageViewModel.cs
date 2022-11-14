@@ -5,10 +5,6 @@ using MyFirstProject.ViewViewModel.Image;
 using MyFirstProject.ViewViewModel.Layout;
 using MyFirstProject.ViewViewModel.List_View;
 using MyFirstProject.ViewViewModel.SQLite;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 

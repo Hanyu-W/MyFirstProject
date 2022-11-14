@@ -5,52 +5,81 @@
              xmlns:model="clr-namespace:MyFirstProject.Models"
              x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersonsImage.DisplayPersonsImageView"
              Title="{Binding Title}">
-    <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding PersonsCollection}"
-                    SelectionMode="None"
-                    ItemsLayout="VerticalList">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
+    <StackLayout>
+        
+        <!--Header-->
+        <Label Text="{Binding Subtitle}"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   AbsoluteLayout.LayoutBounds="0.5,0.05,100,25"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
-                <Grid Padding="10" Margin="12">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding PersonsCollection}"
+                SelectionMode="None"
+                ItemsLayout="VerticalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    
+                    <Grid Padding="10" Margin="12">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackLayout Padding="10" x:DataType="model:Person">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="100"/>
-                            </Grid.RowDefinitions>
+                        <StackLayout Padding="10" x:DataType="model:Person">
+                            <Grid>
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <Image Source="{Binding Image}"
-                                   Grid.Column="0"
-                                   Aspect="AspectFit"/>
-                            
-                            <Label Text="{Binding Name}"
-                               Grid.Column="1"
-                               Grid.Row="0"
-                               LineBreakMode="NoWrap"
-                               FontSize="16"
-                               FontAttributes="Bold"/>
-                        </Grid>
-                            
-                    </StackLayout>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <!--Image of the Person-->
+                                <Image Source="{Binding Image}"
+                                       Grid.Column="0"
+                                       Aspect="AspectFit"/>
+                                
+                                <StackLayout Grid.Column="1" Grid.Row="0">
+                                    
+                                    <!--Names of Persons-->
+                                    <Label Text="{Binding Name}"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           LineBreakMode="NoWrap"
+                                           FontSize="16"
+                                           FontAttributes="Bold"/>
+                                    
+                                    <!--Funny Description of the Person-->
+                                    <Label Text="{Binding Description}"
+                                           Grid.Column="1"
+                                           Grid.Row="1"
+                                           LineBreakMode="NoWrap"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           TextColor="Brown"/>
+                                    
+                                </StackLayout>
+                                
+                            </Grid>
 
-                </Grid>
+                        </StackLayout>
 
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>
