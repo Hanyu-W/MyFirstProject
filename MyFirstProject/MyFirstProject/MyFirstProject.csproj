@@ -82,4 +82,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewViewModel\List View\DisplayPersonsButtonView\" />
+  </ItemGroup>
 </Project>
