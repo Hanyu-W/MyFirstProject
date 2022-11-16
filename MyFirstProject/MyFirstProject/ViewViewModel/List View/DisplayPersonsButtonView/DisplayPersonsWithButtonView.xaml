@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyFirstProject.ViewViewModel.List_View"
              xmlns:model="clr-namespace:MyFirstProject.Models"
-             x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersons.DisplayPersonsView"
+             x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.DisplayPersonsWithButtonView"
              Title="{Binding Title}">
     <StackLayout>
 
@@ -49,6 +49,18 @@
                                        LineBreakMode="NoWrap"
                                        FontSize="16"
                                        FontAttributes="Bold"/>
+
+                                <StackLayout Grid.Column="1" Grid.Row="0">
+                                    <Button Text="Update"
+                                            Grid.Column="1"
+                                            Grid.Row="0"/>
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="2" Grid.Row="0">
+                                    <Button Text="Delete"
+                                            Grid.Column="2"
+                                            Grid.Row="0"/>
+                                </StackLayout>
                             </Grid>
                         </StackLayout>
 
