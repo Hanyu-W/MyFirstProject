@@ -1,17 +1,17 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPerson;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
+using Xamarin.Forms;
 
 namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
 {
     class DisplayPersonsButtonViewModel : BaseViewModel
     {
-        string subtitle = string.Empty;
-
         private ObservableCollection<Person> _person;
 
         private List<Person> _personList;
@@ -19,10 +19,9 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
         public DisplayPersonsButtonViewModel()
         {
             Title = Titles.DisplayButtonTitle;
-            Subtitle = Titles.DisplayButtonSubtitle;
             PersonCollection = new ObservableCollection<Person>();
             _personList = Person.getNames();
-            this.loadPersons();
+            this.LoadPersons();
         }
         
         public ObservableCollection<Person> PersonCollection
@@ -38,8 +37,10 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             }
         }
 
-        private void loadPersons()
+        private void LoadPersons()
         {
+            IsBusy = true;
+
             try
             {
                 _person.Clear();
@@ -52,12 +53,39 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             {
                 Debug.WriteLine(ex);
             }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
-        public string Subtitle
+        public Command<Person> DeleteCommand
         {
-            get { return subtitle; }
-            set { SetProperty(ref subtitle, value); }
+            get
+            {
+                return new Command<Person>((Person pop) =>
+                {
+                    PersonCollection.Remove(pop);
+                });
+            }
+        }
+
+        public Command AddCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new AddPersonView());
+
+                    MessagingCenter.Subscribe<Person>(this, "AddPersons", async (data) =>
+                    {
+                        PersonCollection.Add(data);
+
+                        MessagingCenter.Unsubscribe<Person>(this, "AddPersons");
+                    });
+                });
+            }
         }
     }
 }

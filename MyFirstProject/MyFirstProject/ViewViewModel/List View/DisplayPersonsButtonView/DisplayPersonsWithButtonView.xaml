@@ -1,73 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MyFirstProject.ViewViewModel.List_View"
-             xmlns:model="clr-namespace:MyFirstProject.Models"
+             xmlns:model="clr-namespace:MyFirstProject.Models" 
+             xmlns:local="clr-namespace:MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView"
              x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.DisplayPersonsWithButtonView"
              Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" x:Name="Addbtn"/>
+    </ContentPage.ToolbarItems>
+
     <StackLayout>
 
-        <Label Text="{Binding Subtitle}"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"
-                   TextColor="Black"
-                   AbsoluteLayout.LayoutBounds="0.5,0.05,100,25"
-                   AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Movies"
+                   FontSize="50"
+                   FontAttributes="Bold,Italic"
+                   TextColor="CadetBlue"/>
+        </StackLayout>
 
-        <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding PersonsCollection}"
-                    SelectionMode="None"
-                    ItemsLayout="VerticalList">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
+        <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
 
-                    <Grid Padding="10" Margin="12">
+        <RefreshView x:DataType="local:DisplayPersonsButtonViewModel"
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}"/>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                        </Grid.RowDefinitions>
+            <CollectionView x:Name="ItemsListView"
+                            ItemsSource="{Binding PersonCollection, Mode=TwoWay}"
+                            SelectionMode="None"
+                            ItemsLayout="VerticalList">
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
+                <CollectionView.ItemTemplate>
 
-                        <StackLayout Padding="10" x:DataType="model:Person">
-                            <Grid HeightRequest="1" IsVisible="True" BackgroundColor="Black">
+                    <DataTemplate x:DataType="model:Person">
+                        <StackLayout>
+
+                            <Grid Padding="2">
+
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="100"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="100"/>
-                                </Grid.ColumnDefinitions>
+                                <StackLayout Orientation="Horizontal">
 
-                                <Label Text="{Binding Name}"
-                                       Grid.Column="0"
-                                       Grid.Row="0"
-                                       LineBreakMode="NoWrap"
-                                       FontSize="16"
-                                       FontAttributes="Bold"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Name, Mode=TwoWay}"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Start"
+                                               TextColor="Black"
+                                               FontSize="Medium"/>
+                                    </StackLayout>
 
-                                <StackLayout Grid.Column="1" Grid.Row="0">
-                                    <Button Text="Update"
-                                            Grid.Column="1"
-                                            Grid.Row="0"/>
-                                </StackLayout>
+                                <Button Text="Update"
+                                        HorizontalOptions="EndAndExpand"
+                                        TextTransform="None"/>
 
-                                <StackLayout Grid.Column="2" Grid.Row="0">
-                                    <Button Text="Delete"
-                                            Grid.Column="2"
-                                            Grid.Row="0"/>
-                                </StackLayout>
-                            </Grid>
+                                <Button Text="Delete"
+                                        Command="{Binding Path=BindingContext.DeleteCommand,
+                                                    Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                        CommandParameter="{Binding .}"
+                                        HorizontalOptions="End"
+                                        TextTransform="None"/>
+
+                            </StackLayout>
+                        </Grid>
+
+                        <Frame HeightRequest="2" Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+                            
                         </StackLayout>
-
-                    </Grid>
-
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                    </DataTemplate>
+                    
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+        
     </StackLayout>
+    
 </ContentPage>

@@ -22,7 +22,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <Grid Padding="10" Margin="12">
+                    <Grid Padding="2" Margin="12">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20"/>
@@ -39,16 +39,38 @@
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="200"/>
                                     <ColumnDefinition Width="100"/>
                                 </Grid.ColumnDefinitions>
+                                
+                                <StackLayout Orientation="Horizontal"
+                                             Spacing="60">
+                                    
+                                    <StackLayout>
+                                        <Label Text="{Binding Name}"
+                                               Grid.Column="0"
+                                               Grid.Row="0"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="16"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                
 
-                                <Label Text="{Binding Name}"
-                                       Grid.Column="0"
-                                       Grid.Row="0"
-                                       LineBreakMode="NoWrap"
-                                       FontSize="16"
-                                       FontAttributes="Bold"/>
+                                    <Button Text="Update"
+                                            Command="{Binding Path=BindingContext.UpdateCommand,
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            CommandParameter="{Binding .}"
+                                            HorizontalOptions="EndAndExpand"
+                                            TextTransform="None"/>
+
+                                    <Button Text="Delete"
+                                            Command="{Binding Path=BindingContext.DeleteCommand,
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                            CommandParameter="{Binding .}"
+                                            HorizontalOptions="End"
+                                            TextTransform="None"/>
+                                </StackLayout>
                             </Grid>
                         </StackLayout>
 
