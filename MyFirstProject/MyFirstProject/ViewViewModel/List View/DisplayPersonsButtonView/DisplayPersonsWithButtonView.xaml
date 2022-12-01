@@ -7,13 +7,13 @@
              Title="{Binding Title}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" x:Name="Addbtn"/>
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
 
         <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Movies"
+            <Label Text="Persons"
                    FontSize="50"
                    FontAttributes="Bold,Italic"
                    TextColor="CadetBlue"/>
@@ -31,7 +31,7 @@
 
                 <CollectionView.ItemTemplate>
 
-                    <DataTemplate x:DataType="model:Person">
+                    <DataTemplate x:DataType="model:Movies">
                         <StackLayout>
 
                             <Grid Padding="2">
@@ -51,6 +51,9 @@
                                     </StackLayout>
 
                                 <Button Text="Update"
+                                        Command="{Binding Path=BindingContext.UpdateCommand, 
+                                                    Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                        CommandParameter="{Binding .}"
                                         HorizontalOptions="EndAndExpand"
                                         TextTransform="None"/>
 

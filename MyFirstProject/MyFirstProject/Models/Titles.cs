@@ -33,6 +33,10 @@
 
         public static string DisplayButtonSubtitle { get; } = "The Boys";
 
+        public static string AddTitle { get; } = "Add Page";
+
+        public static string EditTitle { get; } = "Edit Page";
+
 
         //Controls
         public static string ControlMenuTitle { get; } = "Control Menu";

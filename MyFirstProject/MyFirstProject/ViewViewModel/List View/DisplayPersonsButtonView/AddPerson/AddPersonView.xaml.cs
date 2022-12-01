@@ -15,6 +15,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPer
         public AddPersonView()
         {
             InitializeComponent();
+            this.BindingContext = new AddPersonViewModel();
         }
     }
 }

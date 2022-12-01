@@ -1,6 +1,7 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPerson;
+using MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.EditPerson;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,27 +13,27 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
 {
     class DisplayPersonsButtonViewModel : BaseViewModel
     {
-        private ObservableCollection<Person> _person;
+        private ObservableCollection<Movies> _movie;
 
-        private List<Person> _personList;
+        private List<Movies> _movieList;
 
         public DisplayPersonsButtonViewModel()
         {
             Title = Titles.DisplayButtonTitle;
-            PersonCollection = new ObservableCollection<Person>();
-            _personList = Person.getNames();
+            MovieCollection = new ObservableCollection<Movies>();
+            _movieList = Movies.getNames();
             this.LoadPersons();
         }
         
-        public ObservableCollection<Person> PersonCollection
+        public ObservableCollection<Movies> MovieCollection
         {
             get
             {
-                return _person;
+                return _movie;
             }
             set
             {
-                _person = value;
+                _movie = value;
                 OnPropertyChanged();
             }
         }
@@ -43,10 +44,10 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
 
             try
             {
-                _person.Clear();
-                foreach (var p in _personList)
+                _movie.Clear();
+                foreach (var p in _movieList)
                 {
-                    _person.Add(p);
+                    _movie.Add(p);
                 }
             }
             catch (Exception ex)
@@ -65,7 +66,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             {
                 return new Command<Person>((Person pop) =>
                 {
-                    PersonCollection.Remove(pop);
+                    MovieCollection.Remove(pop);
                 });
             }
         }
@@ -78,11 +79,34 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
                 {
                     Application.Current.MainPage.Navigation.PushAsync(new AddPersonView());
 
-                    MessagingCenter.Subscribe<Person>(this, "AddPersons", async (data) =>
+                    MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
                     {
-                        PersonCollection.Add(data);
+                        MovieCollection.Add(data);
 
-                        MessagingCenter.Unsubscribe<Person>(this, "AddPersons");
+                        MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
+                    });
+                });
+            }
+        }
+
+        public Command UpdateCommand
+        {
+            get
+            {
+                return new Command<Movies>((Movies mov) =>
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new EditPersonView(mov));
+
+                    MessagingCenter.Subscribe<Movies>(this, "UpdateMovies", async (data) =>
+                    {
+                        var index = MovieCollection.IndexOf(mov);
+
+                        MovieCollection.RemoveAt(index);
+
+                        MovieCollection.Insert(index, data);
+
+                        MessagingCenter.Unsubscribe<Movies>(this, "UpdatePersons");
+
                     });
                 });
             }

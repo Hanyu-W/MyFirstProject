@@ -2,23 +2,21 @@
 using MyFirstProject.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPerson
+namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.EditPerson
 {
-    public class AddPersonViewModel : BaseViewModel
+    class EditPersonViewModel : BaseViewModel
     {
-        public ICommand SaveBtnClicked { get; set; }
+        public ICommand UpdateBtnClicked { get; set; }
         private string _movieName = string.Empty;
 
-        public AddPersonViewModel()
+        public EditPersonViewModel()
         {
-            Title = Titles.AddTitle;
-
-            SaveBtnClicked = new Command(PerformSave);
+            Title = Titles.EditTitle;
+            UpdateBtnClicked = new Command(PerformSave);
         }
 
         public string MovieName
@@ -43,7 +41,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPer
             Person person = new Person();
             person.Name = _movieName;
 
-            MessagingCenter.Send<Person>(person, "AddPersons");
+            MessagingCenter.Send<Person>(person, "UpdatePersons");
             Application.Current.MainPage.Navigation.PopAsync();
         }
     }

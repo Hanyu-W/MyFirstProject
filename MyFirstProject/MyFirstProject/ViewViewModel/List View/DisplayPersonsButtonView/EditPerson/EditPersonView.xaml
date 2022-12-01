@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPerson.AddPersonView"
+             x:Class="MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.EditPerson.EditPersonView"
              Title="{Binding Title}">
     <StackLayout Padding="5">
 
@@ -13,10 +13,10 @@
                FontSize="Small"
                HorizontalOptions="FillAndExpand"
                Text="{Binding PersonName}"
-               x:Name="Name"/>
+               x:Name="MovieName"/>
 
-        <Button Text="Save"
-                Command="{Binding SaveBtnClicked}"
+        <Button Text="Update"
+                Command="{Binding UpdateBtnClicked}"
                 HorizontalOptions="FillAndExpand"
                 BackgroundColor="Maroon"
                 TextColor="White"
