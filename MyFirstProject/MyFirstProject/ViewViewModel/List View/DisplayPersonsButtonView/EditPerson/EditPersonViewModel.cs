@@ -38,10 +38,10 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.EditPe
                 return;
             }
 
-            Person person = new Person();
-            person.Name = _movieName;
+            Movies movie = new Movies();
+            movie.Name = _movieName;
 
-            MessagingCenter.Send<Person>(person, "UpdatePersons");
+            MessagingCenter.Send<Movies>(movie, "UpdateMovies");
             Application.Current.MainPage.Navigation.PopAsync();
         }
     }

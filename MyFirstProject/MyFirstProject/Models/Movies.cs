@@ -4,9 +4,14 @@ using System.Text;
 
 namespace MyFirstProject.Models
 {
-    class Movies
+    public class Movies
     {
         public string Name { get; set; }
+
+        public Movies()
+        {
+
+        }
 
         //movie constructor with only name
         public Movies(string name)

@@ -29,7 +29,7 @@
 
         public static string DisplayImageSubtitle { get; } = "The Boys";
 
-        public static string DisplayButtonTitle { get; } = "Display Persons With Buttons";
+        public static string DisplayButtonTitle { get; } = "Display Movies With Icons";
 
         public static string DisplayButtonSubtitle { get; } = "The Boys";
 

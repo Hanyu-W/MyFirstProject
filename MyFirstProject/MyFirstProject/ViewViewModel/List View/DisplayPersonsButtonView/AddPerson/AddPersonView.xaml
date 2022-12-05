@@ -5,14 +5,14 @@
              Title="{Binding Title}">
     <StackLayout Padding="5">
 
-        <Label Text="Person Name"
+        <Label Text="Movie Name"
                FontAttributes="Bold"
                TextColor="Black"/>
 
-        <Entry Placeholder="Enter Person Name"
+        <Entry Placeholder="Enter Movie Name"
                FontSize="Small"
                HorizontalOptions="FillAndExpand"
-               Text="{Binding PersonName}"
+               Text="{Binding MovieName}"
                x:Name="Name"/>
 
         <Button Text="Save"

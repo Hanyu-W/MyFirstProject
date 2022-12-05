@@ -13,6 +13,10 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
 {
     class DisplayPersonsButtonViewModel : BaseViewModel
     {
+        public ImageSource EditImageSrc { get; set; }
+
+        public ImageSource DeleteImageSrc { get; set; }
+
         private ObservableCollection<Movies> _movie;
 
         private List<Movies> _movieList;
@@ -22,9 +26,11 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             Title = Titles.DisplayButtonTitle;
             MovieCollection = new ObservableCollection<Movies>();
             _movieList = Movies.getNames();
-            this.LoadPersons();
+            EditImageSrc = ImageSource.FromResource("MyFirstProject.Image.iconsedit.png");
+            this.LoadMovies();
+            DeleteImageSrc = ImageSource.FromResource("MyFirstProject.Image.iconsdelete.png");
         }
-        
+
         public ObservableCollection<Movies> MovieCollection
         {
             get
@@ -38,7 +44,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             }
         }
 
-        private void LoadPersons()
+        private void LoadMovies()
         {
             IsBusy = true;
 
@@ -60,13 +66,13 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
             }
         }
 
-        public Command<Person> DeleteCommand
+        public Command<Movies> DeleteCommand
         {
             get
             {
-                return new Command<Person>((Person pop) =>
+                return new Command<Movies>((Movies movie) =>
                 {
-                    MovieCollection.Remove(pop);
+                    MovieCollection.Remove(movie);
                 });
             }
         }
@@ -105,7 +111,7 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView
 
                         MovieCollection.Insert(index, data);
 
-                        MessagingCenter.Unsubscribe<Movies>(this, "UpdatePersons");
+                        MessagingCenter.Unsubscribe<Movies>(this, "UpdateMovies");
 
                     });
                 });

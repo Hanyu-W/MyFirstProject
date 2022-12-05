@@ -40,10 +40,10 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.AddPer
                 return;
             }
 
-            Person person = new Person();
-            person.Name = _movieName;
+            Movies movie = new Movies();
+            movie.Name = _movieName;
 
-            MessagingCenter.Send<Person>(person, "AddPersons");
+            MessagingCenter.Send<Movies>(movie, "AddMovies");
             Application.Current.MainPage.Navigation.PopAsync();
         }
     }

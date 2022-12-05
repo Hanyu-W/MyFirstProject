@@ -13,11 +13,11 @@ namespace MyFirstProject.ViewViewModel.List_View.DisplayPersonsButtonView.EditPe
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditPersonView : ContentPage
     {
-        public EditPersonView(Movies mov)
+        public EditPersonView(Movies movie)
         {
             InitializeComponent();
             this.BindingContext = new EditPersonViewModel();
-            MovieName.Text = mov.Name;
+            MovieName.Text = movie.Name;
         }
     }
 }

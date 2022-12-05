@@ -15,6 +15,8 @@
     <None Remove="Image\Divyesh.JPG" />
     <None Remove="Image\Hanyu.HEIC" />
     <None Remove="Image\Hanyu.jpg" />
+    <None Remove="Image\iconsdelete.png" />
+    <None Remove="Image\iconsedit.png" />
     <None Remove="Image\Ilya.JPG" />
     <None Remove="Image\Justin.HEIC" />
     <None Remove="Image\Justin.JPG" />
@@ -25,6 +27,8 @@
     <EmbeddedResource Include="Image\azusa-nakano.jpg" />
     <EmbeddedResource Include="Image\Divyesh.jpg" />
     <EmbeddedResource Include="Image\Hanyu.jpg" />
+    <EmbeddedResource Include="Image\iconsdelete.png" />
+    <EmbeddedResource Include="Image\iconsedit.png" />
     <EmbeddedResource Include="Image\Ilya.jpg" />
     <EmbeddedResource Include="Image\Justin.JPG" />
     <EmbeddedResource Include="Image\Kevin.jpg" />

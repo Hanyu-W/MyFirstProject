@@ -13,7 +13,7 @@
     <StackLayout>
 
         <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Persons"
+            <Label Text="Movies"
                    FontSize="50"
                    FontAttributes="Bold,Italic"
                    TextColor="CadetBlue"/>
@@ -25,7 +25,7 @@
                      IsRefreshing="{Binding IsBusy, Mode=TwoWay}"/>
 
             <CollectionView x:Name="ItemsListView"
-                            ItemsSource="{Binding PersonCollection, Mode=TwoWay}"
+                            ItemsSource="{Binding MovieCollection, Mode=TwoWay}"
                             SelectionMode="None"
                             ItemsLayout="VerticalList">
 
@@ -50,19 +50,19 @@
                                                FontSize="Medium"/>
                                     </StackLayout>
 
-                                <Button Text="Update"
-                                        Command="{Binding Path=BindingContext.UpdateCommand, 
-                                                    Source={x:Reference ItemsListView}, Mode=TwoWay}"
-                                        CommandParameter="{Binding .}"
-                                        HorizontalOptions="EndAndExpand"
-                                        TextTransform="None"/>
+                                <ImageButton Source="{Binding Path=BindingContext.EditImageSrc,
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                             Command="{Binding Path=BindingContext.UpdateCommand, 
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                             CommandParameter="{Binding .}"
+                                             HorizontalOptions="EndAndExpand"/>
 
-                                <Button Text="Delete"
-                                        Command="{Binding Path=BindingContext.DeleteCommand,
-                                                    Source={x:Reference ItemsListView}, Mode=TwoWay}"
-                                        CommandParameter="{Binding .}"
-                                        HorizontalOptions="End"
-                                        TextTransform="None"/>
+                                <ImageButton Source="{Binding Path=BindingContext.DeleteImageSrc,
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                             Command="{Binding Path=BindingContext.DeleteCommand,
+                                                      Source={x:Reference ItemsListView}, Mode=TwoWay}"
+                                             CommandParameter="{Binding .}"
+                                             HorizontalOptions="End"/>
 
                             </StackLayout>
                         </Grid>
