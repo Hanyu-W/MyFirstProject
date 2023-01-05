@@ -14,8 +14,8 @@
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
                 <Button Grid.Row ="0" Grid.Column="0" Text="Slider" Command="{Binding OnSliderClicked}"/>
-                <!--<Button Grid.Row ="0" Grid.Column="1" Text="VMI Image" Command="{Binding OnVMIimageClicked}"/>-->
-                <!--<Button Grid.Row ="1" Grid.Column="0" Text="Embedded Image" Command="{Binding OnEmbeddedimageClicked}"/>-->
+            <Button Grid.Row ="0" Grid.Column="1" Text="Stepper" Command="{Binding OnStepperClicked}"/>
+            <!--<Button Grid.Row ="1" Grid.Column="0" Text="Embedded Image" Command="{Binding OnEmbeddedimageClicked}"/>-->
                 <!--<Button Grid.Row ="1" Grid.Column="1" Text="Activity Image" Command="{Binding OnActivityimageClicked}"/>-->
         </Grid>
         </StackLayout>

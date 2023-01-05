@@ -43,6 +43,8 @@
 
         public static string SliderTitle { get; } = "Slider";
 
+        public static string StepperTitle { get; } = "Stepper";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 
