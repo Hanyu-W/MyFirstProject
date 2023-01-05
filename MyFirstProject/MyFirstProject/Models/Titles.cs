@@ -41,6 +41,8 @@
         //Controls
         public static string ControlMenuTitle { get; } = "Control Menu";
 
+        public static string SliderTitle { get; } = "Slider";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 
