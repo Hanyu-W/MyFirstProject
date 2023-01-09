@@ -45,6 +45,10 @@
 
         public static string StepperTitle { get; } = "Stepper";
 
+        public static string SwitchTitle { get; } = "Switch";
+
+        public static string TwoSwitchTitle { get; } = "Two Switch";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 

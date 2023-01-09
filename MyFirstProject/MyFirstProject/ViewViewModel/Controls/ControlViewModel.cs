@@ -2,6 +2,8 @@
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.Controls.Slider;
 using MyFirstProject.ViewViewModel.Controls.Stepper;
+using MyFirstProject.ViewViewModel.Controls.Switch;
+using MyFirstProject.ViewViewModel.Controls.TwoSwitch;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -14,11 +16,17 @@ namespace MyFirstProject.ViewViewModel.Controls
 
         public ICommand OnStepperClicked { get; set; }
 
+        public ICommand OnSwitchClicked { get; set; }
+
+        public ICommand OnTwoSwitchClicked { get; set; }
+
         public ControlViewModel()
         {
             Title = Titles.ControlMenuTitle;
             OnSliderClicked = new Command(OnSliderClickedAsync);
             OnStepperClicked = new Command(OnStepperClickedAsync);
+            OnSwitchClicked = new Command(OnSwitchClickedAsync);
+            OnTwoSwitchClicked = new Command(OnTwoSwitchClickedAsync);
         }
 
         private async void OnSliderClickedAsync(object obj)
@@ -29,6 +37,16 @@ namespace MyFirstProject.ViewViewModel.Controls
         private async void OnStepperClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new StepperView());
+        }
+
+        private async void OnSwitchClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new SwitchView());
+        }
+
+        private async void OnTwoSwitchClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new TwoSwitchView());
         }
     }
 }

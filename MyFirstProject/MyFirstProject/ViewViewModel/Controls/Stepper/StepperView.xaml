@@ -29,4 +29,5 @@
                HorizontalOptions="Center"/>
         
     </StackLayout>
+    
 </ContentPage>
