@@ -49,6 +49,8 @@
 
         public static string TwoSwitchTitle { get; } = "Two Switch";
 
+        public static string EntryTitle { get; } = "Entry";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 
