@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModel.Controls.EntryPage;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,6 +39,8 @@ namespace MyFirstProject.ViewViewModel.Controls.Entry
                 await Application.Current.MainPage.DisplayAlert(Titles.EntryTitle, Msgs.NotEmpty, "Ok");
                 return;
             }
+
+            await Application.Current.MainPage.Navigation.PushAsync(new EntryResultView(EntryText));
         }
     }
 }

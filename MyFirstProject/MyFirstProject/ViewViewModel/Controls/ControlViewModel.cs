@@ -1,6 +1,7 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.Controls.Entry;
+using MyFirstProject.ViewViewModel.Controls.EntryPage;
 using MyFirstProject.ViewViewModel.Controls.Slider;
 using MyFirstProject.ViewViewModel.Controls.Stepper;
 using MyFirstProject.ViewViewModel.Controls.Switch;

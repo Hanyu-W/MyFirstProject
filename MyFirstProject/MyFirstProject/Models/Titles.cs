@@ -51,6 +51,8 @@
 
         public static string EntryTitle { get; } = "Entry";
 
+        public static string EntryResultTitle { get; } = "Entry Result";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 
