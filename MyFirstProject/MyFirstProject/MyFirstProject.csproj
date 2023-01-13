@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <None Remove="Image\azusa-nakano.jpg" />
+    <None Remove="Image\buttonred.png" />
+    <None Remove="Image\buttonsubmit.png" />
     <None Remove="Image\Divyesh.JPG" />
     <None Remove="Image\Hanyu.HEIC" />
     <None Remove="Image\Hanyu.jpg" />
@@ -25,6 +27,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Image\azusa-nakano.jpg" />
+    <EmbeddedResource Include="Image\buttonred.png" />
+    <EmbeddedResource Include="Image\buttonsubmit.png" />
     <EmbeddedResource Include="Image\Divyesh.jpg" />
     <EmbeddedResource Include="Image\Hanyu.jpg" />
     <EmbeddedResource Include="Image\iconsdelete.png" />
@@ -47,6 +51,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Controls\Entry\EntryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\PickerMenu\PickerMenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\Picker\PickerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Controls\Slider\SliderView.xaml">

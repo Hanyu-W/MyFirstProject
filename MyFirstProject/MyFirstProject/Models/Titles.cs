@@ -53,6 +53,10 @@
 
         public static string EntryResultTitle { get; } = "Entry Result";
 
+        public static string PickerMenuTitle { get; } = "Picker Menu";
+
+        public static string PickerXAMLTitle { get; } = "Picker XAML Page";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 

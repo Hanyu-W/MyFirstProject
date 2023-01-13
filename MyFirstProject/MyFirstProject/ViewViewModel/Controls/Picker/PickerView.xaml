@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstProject.ViewViewModel.Controls.Picker.PickerView"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="0,20">
+        <Label Text="Picker XAML!"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <Picker x:Name="pickerXAML"
+                    Title="Select a Car"
+                    TitleColor="DarkRed"
+                    SelectedIndex="{Binding SelectedItem}"
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="300">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>2003 Purple Honda Civic</x:String>
+                        <x:String>2010 Black Chevy Tahoe</x:String>
+                        <x:String>2016 Yellow Infiniti QX60</x:String>
+                        <x:String>2011 Grey Toyota Camry</x:String>
+                        <x:String>2022 Red Mazda3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button BackgroundColor="Transparent"
+                    ImageSource="{Binding SubmitButton}"
+                    Command="{Binding OnSubmitClicked}"/>
+        </StackLayout>
+            
+    </StackLayout>
+        
+</ContentPage>

@@ -2,6 +2,8 @@
 using MyFirstProject.ViewModels;
 using MyFirstProject.ViewViewModel.Controls.Entry;
 using MyFirstProject.ViewViewModel.Controls.EntryPage;
+using MyFirstProject.ViewViewModel.Controls.Picker;
+using MyFirstProject.ViewViewModel.Controls.PickerMenu;
 using MyFirstProject.ViewViewModel.Controls.Slider;
 using MyFirstProject.ViewViewModel.Controls.Stepper;
 using MyFirstProject.ViewViewModel.Controls.Switch;
@@ -24,6 +26,8 @@ namespace MyFirstProject.ViewViewModel.Controls
 
         public ICommand OnEntryClicked { get; set; }
 
+        public ICommand OnPickerMenuClicked { get; set; }
+
         public ControlViewModel()
         {
             Title = Titles.ControlMenuTitle;
@@ -32,6 +36,7 @@ namespace MyFirstProject.ViewViewModel.Controls
             OnSwitchClicked = new Command(OnSwitchClickedAsync);
             OnTwoSwitchClicked = new Command(OnTwoSwitchClickedAsync);
             OnEntryClicked = new Command(OnEntryClickedAsync);
+            OnPickerMenuClicked = new Command(OnPickerMenuClickedAsync);
         }
 
         private async void OnSliderClickedAsync(object obj)
@@ -57,6 +62,11 @@ namespace MyFirstProject.ViewViewModel.Controls
         private async void OnEntryClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new EntryView());
+        }
+
+        private async void OnPickerMenuClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerMenuView());
         }
     }
 }
