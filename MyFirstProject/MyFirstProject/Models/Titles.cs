@@ -57,6 +57,10 @@
 
         public static string PickerXAMLTitle { get; } = "Picker XAML Page";
 
+        public static string PickerVMTitle { get; } = "Picker VM Page";
+
+        public static string PickerResultTitle { get; } = "Picker Result Page";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 

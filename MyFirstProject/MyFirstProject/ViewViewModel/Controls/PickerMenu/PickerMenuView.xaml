@@ -10,7 +10,11 @@
         <Button BackgroundColor="Transparent"
                     ImageSource="{Binding XAMLButton}"
                     Command="{Binding OnXAMLButtonClicked}"/>
-        
+
+        <Button BackgroundColor="Transparent"
+                    ImageSource="{Binding VMButton}"
+                    Command="{Binding OnVMButtonClicked}"/>
+
     </StackLayout>
 
 </ContentPage>

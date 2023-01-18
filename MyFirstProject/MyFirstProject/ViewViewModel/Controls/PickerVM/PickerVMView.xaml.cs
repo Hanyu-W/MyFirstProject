@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MyFirstProject.ViewViewModel.Controls.PickerMenu
+namespace MyFirstProject.ViewViewModel.Controls.PickerVM
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PickerMenuView : ContentPage
+    public partial class PickerVMView : ContentPage
     {
-        public PickerMenuView()
+        public PickerVMView()
         {
             InitializeComponent();
-            this.BindingContext = new PickerMenuViewModel();
+            this.BindingContext = new PickerVMViewModel();
         }
     }
 }
