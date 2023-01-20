@@ -16,7 +16,7 @@
             <Picker x:Name="pickerXAML"
                     Title="Select a Car"
                     TitleColor="DarkRed"
-                    SelectedIndex="{Binding SelectedItem}"
+                    SelectedItem="{Binding SelectedItem}"
                     VerticalOptions="FillAndExpand"
                     WidthRequest="300">
                 <Picker.ItemsSource>

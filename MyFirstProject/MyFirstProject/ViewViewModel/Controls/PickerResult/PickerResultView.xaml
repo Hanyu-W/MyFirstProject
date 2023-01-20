@@ -11,10 +11,15 @@
                FontSize="Medium"
                HorizontalOptions="CenterAndExpand"/>
 
-        <Label Text="sdfjksfdkl"
+        <Label Text="{Binding PickerSelection}"
                x:Name="ResultText"
-               TextColor="Orange"
+               TextColor="Black"
                FontSize="Medium"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <Image Source="{Binding ImageSrc}"
+               Aspect="AspectFit"
+               x:Name="ResultImage"
                HorizontalOptions="CenterAndExpand"/>
 
     </StackLayout>

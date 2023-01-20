@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModel.Controls.PickerResult;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,22 +18,34 @@ namespace MyFirstProject.ViewViewModel.Controls.PickerVM
 
         public ImageSource SubmitButton { get; set; }
 
-        public List<String> MovieList { get; set; }
+        public List<string> PersonList { get; set; }
+
+        public string SelectedItem { get; set; }
+
+        public int SelectedIndex { get; set; }
+
+        public List<Person> AllPersons { get; set; }
 
         public PickerVMViewModel()
         {
             Title = Titles.PickerVMTitle;
             SubmitButton = ImageSource.FromResource("MyFirstProject.Image.buttonsubmit.png");
-            this.GetMovieList();
-
+            this.GetPersonList();
+            OnSubmitClicked = new Command(OnSubmitClickedAsync);
         }
 
-        private void GetMovieList()
+        private async void OnSubmitClickedAsync(object obj)
         {
-            var movies = Movies.getNames();
-
-            MovieList = (from m in movies select m.Name).ToList();
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerResultView(SelectedItem, AllPersons[SelectedIndex].Image));
         }
-        
+
+        private void GetPersonList()
+        {
+            AllPersons = Person.getNamesWithPicture();
+
+            var persons = Person.getNames();
+
+            PersonList = (from p in persons select p.Name).ToList();
+        }        
     }
 }

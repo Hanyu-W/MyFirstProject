@@ -14,12 +14,13 @@
         <StackLayout VerticalOptions="CenterAndExpand"
                      HorizontalOptions="CenterAndExpand">
             <Picker x:Name="pickerVM"
-                    Title="Select a Movie"
+                    Title="Select a Person"
                     TitleColor="DarkRed"
-                    SelectedIndex="{Binding SelectedItem}"
+                    SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                    SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}"
                     VerticalOptions="FillAndExpand"
                     WidthRequest="300"
-                    ItemsSource="{Binding MovieList, Mode=TwoWay}"/>
+                    ItemsSource="{Binding PersonList, Mode=TwoWay}"/>
 
             <Button BackgroundColor="Transparent"
                     ImageSource="{Binding SubmitButton}"
