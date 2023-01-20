@@ -6,12 +6,12 @@
 
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-        <Label Text="Result from Picker"
+        <Label Text="Result from Picker VM"
                TextColor= "Blue"
                FontSize="Medium"
                HorizontalOptions="CenterAndExpand"/>
 
-        <Label Text=""
+        <Label Text="sdfjksfdkl"
                x:Name="ResultText"
                TextColor="Orange"
                FontSize="Medium"
