@@ -5,6 +5,7 @@
              Title="{Binding Title}">
 
     <StackLayout Padding="0,20">
+        
         <Label Text="Picker VM!"
                FontSize="Large"
                FontAttributes="Bold"
@@ -13,6 +14,7 @@
 
         <StackLayout VerticalOptions="CenterAndExpand"
                      HorizontalOptions="CenterAndExpand">
+            
             <Picker x:Name="pickerVM"
                     Title="Select a Person"
                     TitleColor="DarkRed"
@@ -25,6 +27,7 @@
             <Button BackgroundColor="Transparent"
                     ImageSource="{Binding SubmitButton}"
                     Command="{Binding OnSubmitClicked}"/>
+            
         </StackLayout>
 
     </StackLayout>

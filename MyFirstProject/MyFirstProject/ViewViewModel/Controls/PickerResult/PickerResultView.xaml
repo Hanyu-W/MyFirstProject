@@ -4,24 +4,32 @@
              x:Class="MyFirstProject.ViewViewModel.Controls.PickerResult.PickerResultView"
              Title="{Binding Title}">
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <StackLayout>
 
-        <Label Text="Result from Picker VM"
+        <Label Text="Picker Result!"
                TextColor= "Blue"
-               FontSize="Medium"
+               FontSize="Large"
                HorizontalOptions="CenterAndExpand"/>
 
         <Label Text="{Binding PickerSelection}"
                x:Name="ResultText"
                TextColor="Black"
                FontSize="Medium"
-               HorizontalOptions="CenterAndExpand"/>
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+        
+        <StackLayout VerticalOptions="CenterAndExpand">
 
-        <Image Source="{Binding ImageSrc}"
-               Aspect="AspectFit"
-               x:Name="ResultImage"
-               HorizontalOptions="CenterAndExpand"/>
+            <Image Source="{Binding ImageSrc}"
+                   Aspect="AspectFit"
+                   x:Name="ResultImage"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="300"
+                   WidthRequest="300"/>
 
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>
