@@ -1,5 +1,6 @@
 ﻿using MyFirstProject.Models;
 using MyFirstProject.ViewModels;
+using MyFirstProject.ViewViewModel.Controls.DatePickerMenu;
 using MyFirstProject.ViewViewModel.Controls.Entry;
 using MyFirstProject.ViewViewModel.Controls.EntryPage;
 using MyFirstProject.ViewViewModel.Controls.Picker;
@@ -28,6 +29,8 @@ namespace MyFirstProject.ViewViewModel.Controls
 
         public ICommand OnPickerMenuClicked { get; set; }
 
+        public ICommand OnDatePickerMenuClicked { get; set; }
+
         public ControlViewModel()
         {
             Title = Titles.ControlMenuTitle;
@@ -37,6 +40,7 @@ namespace MyFirstProject.ViewViewModel.Controls
             OnTwoSwitchClicked = new Command(OnTwoSwitchClickedAsync);
             OnEntryClicked = new Command(OnEntryClickedAsync);
             OnPickerMenuClicked = new Command(OnPickerMenuClickedAsync);
+            OnDatePickerMenuClicked = new Command(OnDatePickerMenuClickedAsync);
         }
 
         private async void OnSliderClickedAsync(object obj)
@@ -67,6 +71,11 @@ namespace MyFirstProject.ViewViewModel.Controls
         private async void OnPickerMenuClickedAsync(object obj)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new PickerMenuView());
+        }
+
+        private async void OnDatePickerMenuClickedAsync(object obj)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerMenuView());
         }
     }
 }

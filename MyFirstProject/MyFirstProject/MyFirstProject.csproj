@@ -16,6 +16,8 @@
     <None Remove="Image\buttonred.png" />
     <None Remove="Image\buttonsubmit.png" />
     <None Remove="Image\Divyesh.JPG" />
+    <None Remove="Image\dpbuttonblue.png" />
+    <None Remove="Image\dpbuttonred.png" />
     <None Remove="Image\Hanyu.HEIC" />
     <None Remove="Image\Hanyu.jpg" />
     <None Remove="Image\iconsdelete.png" />
@@ -32,6 +34,8 @@
     <EmbeddedResource Include="Image\buttonred.png" />
     <EmbeddedResource Include="Image\buttonsubmit.png" />
     <EmbeddedResource Include="Image\Divyesh.jpg" />
+    <EmbeddedResource Include="Image\dpbuttonblue.png" />
+    <EmbeddedResource Include="Image\dpbuttonred.png" />
     <EmbeddedResource Include="Image\Hanyu.jpg" />
     <EmbeddedResource Include="Image\iconsdelete.png" />
     <EmbeddedResource Include="Image\iconsedit.png" />
@@ -47,6 +51,18 @@
 
   <ItemGroup>
     <EmbeddedResource Update="ViewViewModel\Controls\ControlsMenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\DatePickerMenu\DatePickerMenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\DatePickerResult\DatePickerResultView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\DatePickerVM\DatePickerVMView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewViewModel\Controls\DatePickerXAML\DatePickerXAMLView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Controls\EntryResult\EntryResultView.xaml">

@@ -61,6 +61,14 @@
 
         public static string PickerResultTitle { get; } = "Picker Result Page";
 
+        public static string DatePickerMenuTitle { get; } = "Date Picker Menu";
+
+        public static string DatePickerXAMLTitle { get; } = "Date Picker XAML Page";
+
+        public static string DatePickerVMTitle { get; } = "Date Picker VM Page";
+
+        public static string DatePickerResultTitle { get; } = "Date Picker Result Page";
+
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
 
