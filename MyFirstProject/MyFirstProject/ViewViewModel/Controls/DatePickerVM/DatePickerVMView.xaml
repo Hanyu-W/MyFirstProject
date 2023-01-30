@@ -1,12 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModel.Controls.DatePickerVM.DatePickerVMView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="MyFirstProject.ViewViewModel.Controls.DatePickerVM.DatePickerVMView"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="20"
+                 VerticalOptions="CenterAndExpand">
+
+        <Switch IsToggled="{Binding isDelta, Mode=TwoWay}"
+                ThumbColor="Blue"
+                OnColor="Green" />
+
+        <Label Text="Start Date"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="Crimson"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <DatePicker DateSelected="StartDatePicker_DateSelected"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    InputTransparent="False" />
+
+        <Frame Padding="3"
+               BackgroundColor="Black"/>
+
+        <Label Text="End Date"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="Blue"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <DatePicker DateSelected="EndDatePicker_DateSelected"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"
+                    InputTransparent="False"/>
+
+        <Button BackgroundColor="Transparent"
+                ImageSource="{Binding SubmitButton}"
+                Command="{Binding ButtonSelected}"/>
+
+    </StackLayout>
+
 </ContentPage>

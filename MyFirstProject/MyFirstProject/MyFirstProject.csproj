@@ -56,9 +56,6 @@
     <EmbeddedResource Update="ViewViewModel\Controls\DatePickerMenu\DatePickerMenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ViewViewModel\Controls\DatePickerResult\DatePickerResultView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="ViewViewModel\Controls\DatePickerVM\DatePickerVMView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
