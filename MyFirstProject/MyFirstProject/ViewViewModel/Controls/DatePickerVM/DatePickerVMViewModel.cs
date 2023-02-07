@@ -56,7 +56,7 @@ namespace MyFirstProject.ViewViewModel.Controls.DatePickerVM
             else if (isDelta)
             {
                 msg = "The start date selected is: " + StartDate.ToShortDateString() + "," +
-                       "The end date selected is: " + EndDate.ToShortDateString() + "," + "The difference in days is " + EndDate.Subtract(StartDate).ToString();
+                       "The end date selected is: " + EndDate.ToShortDateString() + "," + "The difference in days is " + EndDate.Subtract(StartDate).Days;
             }
 
             else
