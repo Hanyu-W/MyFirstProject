@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MyFirstProject.Patterns.Repositories;
+using Xamarin.Forms;
 
 namespace MyFirstProject
 {
@@ -7,6 +8,9 @@ namespace MyFirstProject
         public App()
         {
             InitializeComponent();
+
+            //SQLite
+            DependencyService.Get<ISQLite>().GetConnectionWithCreateDatabase();
 
             MainPage = new NavigationPage(new MainPage());
         }
