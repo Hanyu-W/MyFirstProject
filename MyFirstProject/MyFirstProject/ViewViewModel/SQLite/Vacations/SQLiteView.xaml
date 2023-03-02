@@ -58,7 +58,6 @@
                                         <Switch x:Name="IsVisited"
                                                 IsToggled="{Binding Visited, Mode=TwoWay}"
                                                 Grid.Column="2"
-                                                Toggled="isVisited"
                                                 ThumbColor="Red"
                                                 OnColor="Green"/>
                                     </StackLayout>
