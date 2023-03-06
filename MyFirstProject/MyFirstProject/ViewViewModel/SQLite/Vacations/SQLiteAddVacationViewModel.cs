@@ -20,6 +20,7 @@ namespace MyFirstProject.ViewViewModel.SQLite.Vacations
 
         public SQLiteAddVacationViewModel(Vacation vacation)
         {
+            Title = Titles.SQLiteAddTitle;
             if(vacation != null)
             {
                 this.VacationCollection = vacation;

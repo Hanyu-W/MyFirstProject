@@ -12,7 +12,9 @@ using System.Linq;
 using System.Text;
 using SQLite;
 using System.IO;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(MyFirstProject.Droid.SQLiteAndroid))]
 namespace MyFirstProject.Droid
 {
     public class SQLiteAndroid : ISQLite

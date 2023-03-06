@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row ="0" Grid.Column="0" Text="Display Persons" Command="{Binding OnVacationsClicked}"/>
+            <Button Grid.Row ="0" Grid.Column="0" Text="Vacations" Command="{Binding OnVacationsClicked}"/>
 
         </Grid>
     </StackLayout>

@@ -26,6 +26,7 @@ namespace MyFirstProject.ViewViewModel.SQLite.Vacations
 
         public SQLiteViewModel()
         {
+            Title = Titles.SQLiteTitle;
             VacationCollection = new ObservableCollection<Vacation>();
             Task.Run(async () => await RefreshVacationListData());
 

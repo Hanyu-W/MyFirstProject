@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstProject.ViewViewModel.SQLite.Vacations.SQLiteAddVacationView">
+             x:Class="MyFirstProject.ViewViewModel.SQLite.Vacations.SQLiteAddVacationView"
+             Title="{Binding Title}">
 
     <StackLayout>
         <StackLayout HorizontalOptions="CenterAndExpand">
@@ -39,7 +40,7 @@
         </StackLayout>
 
         <StackLayout HorizontalOptions="FillAndExpand">
-            <Button Text="{Binding ButttonText, Mode=TwoWay}"
+            <Button Text="{Binding ButtonText, Mode=TwoWay}"
                     Command="{Binding PerformSave}"
                     Padding="20"
                     BackgroundColor="Maroon"

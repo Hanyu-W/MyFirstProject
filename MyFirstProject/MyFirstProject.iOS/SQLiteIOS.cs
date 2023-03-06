@@ -6,9 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 using UIKit;
 
+[assembly: Xamarin.Forms.Dependency(typeof(MyFirstProject.iOS.SQLiteIOS))]
 namespace MyFirstProject.iOS
 {
     public class SQLiteIOS : ISQLite

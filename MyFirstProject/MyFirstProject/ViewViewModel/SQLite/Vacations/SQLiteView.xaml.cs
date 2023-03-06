@@ -15,6 +15,7 @@ namespace MyFirstProject.ViewViewModel.SQLite.Vacations
         public SQLiteView()
         {
             InitializeComponent();
+            this.BindingContext = new SQLiteViewModel();
         }
     }
 }

@@ -71,6 +71,8 @@
 
         //SQLite
         public static string SQLiteMenuTitle { get; } = "SQLite Menu";
+        public static string SQLiteTitle { get; } = "SQLite";
+        public static string SQLiteAddTitle { get; } = "SQLite Add";
 
         //Image
         public static string ImageMenuTitle { get; } = "Image Menu";
